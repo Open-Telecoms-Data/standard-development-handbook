@@ -16,9 +16,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'OCDS Development Handbook'
-copyright = '2017, Open Contracting Partnership'
-author = 'Open Contracting Partnership'
+project = 'OFDS Development Handbook'
+copyright = '2022, Open Data Services Co-operative'
+author = 'Open Data Services Co-operative'
 
 
 # -- General configuration ---------------------------------------------------
@@ -27,7 +27,7 @@ author = 'Open Contracting Partnership'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.autosectionlabel', 'myst_parser'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -55,3 +55,4 @@ html_static_path = ['_static']
 # -- Extension configuration -------------------------------------------------
 
 autosectionlabel_prefix_document = True
+myst_enable_extensions = ['deflist', 'fieldlist']
