@@ -1,13 +1,13 @@
-# OCDS Development Handbook
+# OFDS Development Handbook
 
-A guide for authors of the Open Contracting Data Standard.
+A guide for authors of the Open Fibre Data Standard.
 
 ## Build and view the documentation
 
 Create and activate a virtual environment, then install requirements:
 
-```shell
-pip install furo
+```
+pip install -r docs/requirements.txt
 ```
 
 And build the documentation:
@@ -19,7 +19,7 @@ make html
 
 The built documentation is in `_build/html` under `docs`. To view the documentation:
 
-```shell
+```
 python -m http.server --directory _build/html
 ```
 
