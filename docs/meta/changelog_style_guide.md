@@ -1,5 +1,8 @@
 # Changelog style guide
 
+* Use the [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format.
+* Begin each entry with a a link to the pull request for the change.
+
 ## Normative content
 
 Changelog entries should be descriptive:
