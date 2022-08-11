@@ -14,5 +14,6 @@ For documentation on the Open Fibre Data Standard itself see the [standard docum
 :glob:
 
 style/index
+contributing
 technical/index
 ```
