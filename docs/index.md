@@ -13,5 +13,6 @@ For documentation on the Open Fibre Data Standard itself see the [standard docum
 :maxdepth: 2
 :glob:
 
-meta/index
+style/index
+technical/index
 ```

@@ -4,7 +4,7 @@
 :maxdepth: 2
 :glob:
 
-style_guide
+common_conventions
 schema_style_guide
 markdown_style_guide
 changelog_style_guide

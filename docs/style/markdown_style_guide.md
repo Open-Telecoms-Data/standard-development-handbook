@@ -89,14 +89,14 @@ See the documentation on [Markdown footnotes](https://jupyterbook.org/content/co
 
 ```{seealso}
 
-   Reference: [Schema](http://www.example.com)
+   Reference: [Schema](reference/schema.md)
       The schema provides a detailed specification of the fields, data structures and rules for publishing OFDS data.
 ```
 
 ````md
 ```{seealso}
 
-   Reference: [Schema](http://www.example.com)
+   Reference: [Schema](reference/schema.md)
       The schema provides a detailed specification of the fields, data structures and rules for publishing OFDS data.
 ```
 ````
