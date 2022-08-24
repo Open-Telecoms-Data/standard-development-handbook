@@ -43,6 +43,7 @@ When describing data:
 * "publication" for the data source that persists across time
 * "collection" for the publication's data at a specific point in time
 * "JSON data" not "JSON document", to avoid confusion with the `documents` field
+* "geospatial data" not "geodata" or "geo data" or "geographical data" or "spatial data"
 
 When describing JSON Schema:
 
