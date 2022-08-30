@@ -22,7 +22,7 @@ Install requirements
 
 ```
 pip install --upgrade pip setuptools
-pip install -r docs/requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Build the documentation
