@@ -49,3 +49,12 @@ python -m http.server
 ```
 
 Then go to http://localhost:8000/ in a browser.
+
+## View development documentation on readthedocs
+
+Versions are managed via [readthedocs](https://readthedocs.org/) admin (credentials needed). Automation rules have been set up to automatically build and activate hidden versions when new branches are created. Therefore development branches will not be available from the flyout menu on readthedocs, but can be viewed by inserting the branch name into the url, as follows:
+
+```
+https://open-fibre-data-standard.readthedocs.io/en/my-development-branch-name/
+
+```
