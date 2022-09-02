@@ -4,9 +4,9 @@ This page describes the internal process for making changes to the standard repo
 
 ## Getting started
 
-Before contributing to Markdown pages, read the [markdown style guide](style/markdown_style_guide.md).
+Before contributing to Markdown pages, read the [markdown style guide](../style/markdown_style_guide.md).
 
-Before contributing to JSON Schema and CSV codelists, read the [schema style guide](style/schema_style_guide.md) and the [schema patterns](https://os4d.opendataservices.coop/patterns/schema/) section of [Standards Lab](https://os4d.opendataservices.coop/).
+Before contributing to JSON Schema and CSV codelists, read the [schema style guide](../style/schema_style_guide.md) and the [schema patterns](https://os4d.opendataservices.coop/patterns/schema/) section of [Standards Lab](https://os4d.opendataservices.coop/).
 
 To get up to speed on OFDS standard development, you should be familiar with:
 
@@ -27,10 +27,11 @@ To improve your technical writing skills, consider taking [Google's Technical Wr
 1. Create a branch of the `open-fibre-data-standard` repo (not a branch of your fork) in which to make your changes.
 
    -  **Never** use normative words on guidance pages. Use [non-normative synonyms](https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04#page-3) instead.
-   -  Consider composing Markdown content in [Hemingway Editor](http://www.hemingwayapp.com/) or [Grammarly](https://www.grammarly.com/), as suggested in the [common conventions](style/common_conventions.md).
+   -  Consider composing Markdown content in [Hemingway Editor](http://www.hemingwayapp.com/) or [Grammarly](https://www.grammarly.com/), as suggested in the [common conventions](../style/common_conventions.md).
    -  After adding a definition to `schema.json`, add a sub-heading for the new sub-schema in `reference.md`.
 
 1. Update the **changelog**, maintaining schema order in the list of changes.
+1. Run `./manage.py pre-commit` to update the reference documentation
 1. Commit your changes.
 
 ```{admonition} Atomic changes
@@ -94,7 +95,7 @@ To improve your technical writing skills, consider taking [Google's Technical Wr
 
 ## Logging changes
 
-1. Follow the [changelog style guide](style/changelog_style_guide).
+1. Follow the [changelog style guide](../style/changelog_style_guide).
 
 ## Reviewing changes
 
@@ -103,7 +104,7 @@ You can use GitHub's [suggestions feature](https://help.github.com/en/github/col
 You should check for:
 
 -  **Correctness**: Do the changes conform to the standard and its principles?
--  **Style**: Do the changes respect the [style guides](style/index.md)? Are [normative words](https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04#page-3) used on guidance pages?
+-  **Style**: Do the changes respect the [style guides](../style/index.md)? Are [normative words](https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04#page-3) used on guidance pages?
 -  **Spelling and grammar**: If there are few errors, suggest changes directly. If there are many errors, ask the author to use Grammarly or similar.
 
 ## Repository management
