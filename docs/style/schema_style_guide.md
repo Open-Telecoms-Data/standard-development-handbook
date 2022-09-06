@@ -28,9 +28,7 @@ The top level of the schema is split between `properties` and `definitions`. The
 
 Objects can include an `id` field to support cross-referencing, or to disclose the object's real-world identifier.
 
-```{note}
-   `id` values also play a [special role in Flatten Tool](https://flatten-tool.readthedocs.io/en/latest/unflatten/#relationships-using-identifiers).
-```
+If an object is used as an item in an array and has, or may have in the future, a child property that is itself an array of objects, then the object must include an `id` field so that it can be referenced by the objects in the child array. This approach is [necessary for compatibility with Flatten Tool](https://flatten-tool.readthedocs.io/en/latest/unflatten/#relationships-using-identifiers) and useful for relational representations of the data in general.
 
 ### Details field
 
