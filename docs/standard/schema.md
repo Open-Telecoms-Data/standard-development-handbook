@@ -6,7 +6,7 @@ The source for `network-schema.json` and other schema files is in the [`schema` 
 
 ## JSON Schema usage
 
-The tables below list the validation keywords, types and formats used in the schema. For each keyword, type and format, the 'Test data' column contains a JSON pointer to a field in [`network-package-invalid.json`]() that fails validation.
+The tables below list the validation keywords, types and formats used in the schema. For each keyword, type and format, the 'Test data' column contains a JSON pointer to a field in [`network-package-invalid.json`](https://github.com/Open-Telecoms-Data/open-fibre-data-standard/blob/0.1-dev/examples/json/network-package-invalid.json) that fails validation.
 
 ### Keywords
 
