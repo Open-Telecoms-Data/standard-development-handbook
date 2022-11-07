@@ -32,6 +32,10 @@ To improve your technical writing skills, consider taking [Google's Technical Wr
 
 1. Update the **changelog**, maintaining schema order in the list of changes.
 1. Run `./manage.py pre-commit` to update the reference documentation
+1. If you used a validation keyword, type or format that is not [already used in the schema](schema.md#json-schema-usage):
+  1. Update the list of validation keywords, types or formats in [JSON Schema usage](schema.md#json-schema-usage).
+  1. Add a field that fails validation against the new keyword, type or format to [`network-package-invalid.json`]()
+  1. Check that [OFDS CoVE](https://ofds.cove.opendataservices.coop/) reports an appropriate validation error.
 1. Commit your changes.
 
 ```{admonition} Atomic changes
