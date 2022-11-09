@@ -39,7 +39,7 @@ To improve your technical writing skills, consider taking [Google's Technical Wr
 1. If you added a normative rule that is not encoded in JSON Schema:
   1. Update the list of [other normative rules](schema.md#other-normative-rules).
   1. Add a field that does not conform to the rule to [`network-package-additional-checks.json`](https://github.com/Open-Telecoms-Data/open-fibre-data-standard/blob/0.1-dev/examples/json/network-package-additional-checks.json)/
-  1. Open a [new issue](https://github.com/Open-Telecoms-Data/lib-cove-ofds/issues/new/choose) to add an additional check to Lib Cove OFDS/
+  1. Open a [new issue](https://github.com/Open-Telecoms-Data/lib-cove-ofds/issues/new/choose) to add an additional check to Lib Cove OFDS.
 1. Commit your changes.
 
 ```{admonition} Atomic changes
