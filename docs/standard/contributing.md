@@ -101,6 +101,36 @@ To improve your technical writing skills, consider taking [Google's Technical Wr
 
 1. Once approved, you can merge it yourself.
 
+## Pull Request Tests
+
+When you submit a pull request, some tests will be run against it automatically.
+
+### Linkcheck
+
+This will check all external links are valid, and error if not.
+
+If this fails for your pull request, that is ok. This may be due to existing problems or a link in another section of the docs that used to work but now doesn't.
+
+Check the details to make sure that any failures aren't due to any links you have added, and if so attempt to fix them.
+
+### Tests
+
+Various Python tests will run. This must pass before your pull request can be merged.
+
+To run this locally, see [instructions on the build page](../technical/index).
+
+### Mdformat
+
+This formats the md files to a standard specification. This must pass before your pull request can be merged.
+
+This should be done by your pre-commit hook. If this fails, make sure your pre-commit hook is running correctly.
+
+### Build test
+
+This tries to build the site, and treats any warnings as problems as well as errors. This must pass before your pull request can be merged.
+
+To run this locally, see [instructions on the build page](../technical/index).
+
 ## Logging changes
 
 1. Follow the [changelog style guide](../style/changelog_style_guide).
