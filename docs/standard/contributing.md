@@ -90,7 +90,7 @@ To improve your technical writing skills, consider taking [Google's Technical Wr
 
 1. Create a pull request.
 
-   -  Reference the issue number in the pull requests' description.
+   -  Write the pull requests' description, filling in [the relevant bits of the provided template](https://github.com/Open-Telecoms-Data/open-fibre-data-standard/blob/0.1-dev/pull_request_template.md).
    -  Set the *base* branch, e.g. `main`.
    -  Set the *milestone*, e.g. `1.0`.
 
