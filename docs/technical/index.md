@@ -6,5 +6,6 @@
 
 build
 checks
+deployment
 update
 ```
