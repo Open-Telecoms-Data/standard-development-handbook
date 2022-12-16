@@ -79,9 +79,9 @@ To improve your technical writing skills, consider taking [Google's Technical Wr
 
 1. Create a pull request.
 
-   -  Complete the pull request template.
-   -  Set the *base* branch, e.g. `main`.
-   -  Set the *milestone*, e.g. `1.0`.
+   -  Complete the 'Related issues' and 'Description' sections of the pull request template.
+   -  Set the *base* branch, e.g. `0.1-dev`.
+   -  Set the *milestone*, e.g. `Beta`.
 
 1. Complete the merge checklist.
 
