@@ -28,18 +28,7 @@ To improve your technical writing skills, consider taking [Google's Technical Wr
 
    -  **Never** use normative words on guidance pages. Use [non-normative synonyms](https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04#page-3) instead.
    -  Consider composing Markdown content in [Hemingway Editor](http://www.hemingwayapp.com/) or [Grammarly](https://www.grammarly.com/), as suggested in the [common conventions](../style/common_conventions.md).
-   -  After adding a definition to `schema.json`, add a sub-heading for the new sub-schema in `reference.md`.
 
-1. Update the **changelog**, maintaining schema order in the list of changes.
-1. Run `./manage.py pre-commit` to update the reference documentation
-1. If you used a validation keyword, type or format that is not [already used in the schema](schema.md#json-schema-usage):
-  1. Update the list of validation keywords, types or formats in [JSON Schema usage](schema.md#json-schema-usage).
-  1. Add a field that fails validation against the new keyword, type or format to [`network-package-invalid.json`](https://github.com/Open-Telecoms-Data/open-fibre-data-standard/blob/0.1-dev/examples/json/network-package-invalid.json).
-  1. Check that [OFDS CoVE](https://ofds.cove.opendataservices.coop/) reports an appropriate validation error.
-1. If you added a normative rule that is not encoded in JSON Schema:
-  1. Update the list of [other normative rules](schema.md#other-normative-rules).
-  1. Add a field that does not conform to the rule to [`network-package-additional-checks.json`](https://github.com/Open-Telecoms-Data/open-fibre-data-standard/blob/0.1-dev/examples/json/network-package-additional-checks.json)/
-  1. Open a [new issue](https://github.com/Open-Telecoms-Data/lib-cove-ofds/issues/new/choose) to add an additional check to Lib Cove OFDS.
 1. Commit your changes.
 
 ```{admonition} Atomic changes
@@ -90,9 +79,13 @@ To improve your technical writing skills, consider taking [Google's Technical Wr
 
 1. Create a pull request.
 
-   -  Write the pull requests' description, filling in [the relevant bits of the provided template](https://github.com/Open-Telecoms-Data/open-fibre-data-standard/blob/0.1-dev/pull_request_template.md).
-   -  Set the *base* branch, e.g. `main`.
-   -  Set the *milestone*, e.g. `1.0`.
+   -  Complete the 'Related issues' and 'Description' sections of the pull request template.
+   -  Set the *base* branch, e.g. `0.1-dev`.
+   -  Set the *milestone*, e.g. `Beta`.
+
+1. Complete the merge checklist.
+
+1. Resolve any failing [checks](../technical/checks.md)
 
 1. Assign to another team member to review.
 
