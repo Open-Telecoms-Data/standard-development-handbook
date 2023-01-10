@@ -4,8 +4,10 @@
 :maxdepth: 2
 :glob:
 
+repository
 build
 update
+deploy
 ```
 
 ## Running tests locally
