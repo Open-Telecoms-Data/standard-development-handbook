@@ -6,6 +6,16 @@ This process is used for major, minor and patch versions, as well as non-normati
 
 For changes to the documentation only (no schema changes), start from [merge and release](#merge-and-release).
 
+## Read the Docs configuration
+
+[Read the Docs](https://readthedocs.org/) builds and hosts the standard documentation site.
+
+Whenever a commit is pushed to a branch in the [GitHub repository](repository.md), Read the Docs automatically builds the branch and hosts it at `https://open-fibre-data-standard.readthedocs.io/en/<branch name>`.
+
+Users can access the documentation for each minor version of the standard via the [flyout menu](https://docs.readthedocs.io/en/stable/flyout-menu.html). Other branches are hidden from the menu.
+
+You can find credentials for Read the Docs in the Open Data Services password database.
+
 ## Prepare for release
 
 You can skip this section if you are not releasing a new major, minor or patch version.
@@ -22,7 +32,8 @@ Update the MAJOR_MINOR_PATCH version number in the following files:
 
 * `docs/`
   * `conf.py`: update `release`
-  * `reference/schema.md`: update canonical schema URL
+  * `reference/schema.md`: update canonical network schema URL
+  * `reference/publication_formats/json.md`: update canonical network package schema URL
 * `schema/`
   * `network-schema.json`: update `id`
   * `network-package-schema.json`: update `id` and `properties/networks/items/$ref`
@@ -59,20 +70,11 @@ You can skip this step if you are not releasing a new major, minor or patch vers
   git push --follow-tags
 ```
 
-### Update readthedocs
-
-You can skip this step if you are not releasing a new major or minor version.
-
-When releasinog a new major or minor version, the new release should be set to the 'latest' version, and all previous versions should be visible in the flyout menu on readthedocs. To do this:
-
-- Log in to readthedocs and open the `open-fibre-data-standard` project. You will need ODSC admin credentials to do this.
-- To set the new release to be the 'latest' branch, to 'Admin' ? 'Advanced settings and change the option.
-- To change the visibility of the new and previous versions in the flyout, go to 'Versions' and 'Edit' on relevant versions. The 'Hidden' checkbox will determine if a version is visible in the flyout menu.
 ## Complete the deployment
 
-### Update CoVE
+You can skip these steps if you are not releasing a new major, minor or patch version.
 
-You can skip this step if you are not releasing a new major, minor or patch version.
+### Update CoVE
 
 #### Update Lib CoVE OFDS
 
@@ -90,3 +92,8 @@ You can skip this step if you are not releasing a new major, minor or patch vers
 - Update the URL paths in [settings.py](https://github.com/Open-Telecoms-Data/cove-ofds/blob/live/cove_project/settings.py)
 - Make sure all tests pass
 - Deploy the app
+
+### Update Read the Docs
+
+- In the Read the Docs [advanced settings](https://readthedocs.org/dashboard/open-fibre-data-standard/advanced/), set `Default branch` to the branch for the new release.
+- In the Read the Docs [versions settings](https://readthedocs.org/projects/open-fibre-data-standard/versions/), edit the branch for the new release and uncheck `Hidden`.
