@@ -22,6 +22,7 @@ Update the MAJOR_MINOR_PATCH version number in the following files:
 
 * `docs/`
   * `conf.py`: update `release`
+  * `reference/schema.md`: update canonical schema URL
 * `schema/`
   * `network-schema.json`: update `id`
   * `network-package-schema.json`: update `id` and `properties/networks/items/$ref`
@@ -58,6 +59,15 @@ You can skip this step if you are not releasing a new major, minor or patch vers
   git push --follow-tags
 ```
 
+### Update readthedocs
+
+You can skip this step if you are not releasing a new major or minor version.
+
+When releasinog a new major or minor version, the new release should be set to the 'latest' version, and all previous versions should be visible in the flyout menu on readthedocs. To do this:
+
+- Log in to readthedocs and open the `open-fibre-data-standard` project. You will need ODSC admin credentials to do this.
+- To set the new release to be the 'latest' branch, to 'Admin' ? 'Advanced settings and change the option.
+- To change the visibility of the new and previous versions in the flyout, go to 'Versions' and 'Edit' on relevant versions. The 'Hidden' checkbox will determine if a version is visible in the flyout menu.
 ## Complete the deployment
 
 ### Update CoVE
