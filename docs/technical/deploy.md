@@ -20,6 +20,21 @@ You can find credentials for Read the Docs in the Open Data Services password da
 
 You can skip this section if you are not releasing a new major, minor or patch version.
 
+### Perform periodic updates
+
+#### Update the fibreType codelist
+
+The codes in the [fibreType codelist](https://open-fibre-data-standard.readthedocs.io/en/latest/reference/codelists.html#fibretype) are identifiers for [ITU-T G Series Recommendations](https://www.itu.int/rec/T-REC-G/en) that describe the characteristics of optical fibre and cables.
+
+1. Check the ITU-T G Series Recommendations for recommendations in the range G.651.1-G.659 that do not appear in the fibreType codelist. For each new recommendation:
+  1. Add the recommendation number (e.g. G.652) to the fibreType codelist
+  1. Set the code's title to the recommendation number
+  2. Set the code's description to:
+
+    ```
+    A <description from ITU-T G Series Recommendations page> that conforms to ITU-T recommendation <recommendation number>.
+    ```
+
 ### Update version numbers and changelog
 
 Update the MAJOR.MINOR version number in the following files:
