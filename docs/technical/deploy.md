@@ -22,6 +22,20 @@ You can skip this section if you are not releasing a new major, minor or patch v
 
 ### Perform periodic updates
 
+#### Update external codelists
+
+```bash
+./manage.py update-codelists
+```
+
+#### Update the country codelist
+
+Follow the instructions in the `--help` message:
+
+```bash
+python manage.py update-country --help
+```
+
 #### Update the fibreType codelist
 
 The codes in the [fibreType codelist](https://open-fibre-data-standard.readthedocs.io/en/latest/reference/codelists.html#fibretype) are identifiers for [ITU-T G Series Recommendations](https://www.itu.int/rec/T-REC-G/en) that describe the characteristics of optical fibre and cables.
