@@ -3,7 +3,7 @@
 ## Get started
 
 ```{note}
-   Building the documentation requires Python 3.9 or greater.
+Building the documentation requires Python 3.9 or greater.
 ```
   
 Create a virtual environment:
