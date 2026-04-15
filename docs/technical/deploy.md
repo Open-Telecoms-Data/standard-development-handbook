@@ -119,6 +119,7 @@ You can skip these steps if you are not releasing a new major, minor or patch ve
   pip-compile -P libcoveofds; pip-compile requirements_dev.in
 ```
 - Update the URL paths in [settings.py](https://github.com/Open-Telecoms-Data/cove-ofds/blob/live/cove_project/settings.py)
+- Update the OFDS documentation URLs in the [templates](https://github.com/Open-Telecoms-Data/cove-ofds/tree/live/cove_ofds/templates/cove_ofds)
 - Make sure all tests pass
 - Deploy the app
 
