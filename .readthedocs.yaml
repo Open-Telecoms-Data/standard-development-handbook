@@ -1,10 +1,11 @@
 version: 2
 build:
-  os: ubuntu-20.04
+  os: ubuntu-lts-latest
   tools:
-    python: "3.9"
+    python: "3.14"
 python:
   install:
     - requirements: docs/requirements.txt
 sphinx:
   fail_on_warning: true
+  configuration: docs/conf.py
