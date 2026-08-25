@@ -36,12 +36,14 @@ The following diagram illustrates how the source files in the repository are tra
                 direction LR
                 D1["Data Model CSVs, Diagram and Sphinx Directives"]
                 D2["JSON Schema CSV"]
-                D3["GeoPackage Schema"]
-                D4["CSV Examples"]
+                D3["GeoPackage Template and Diagram"]
+                D4["CSV Template and Examples"]
                 D5["CSV Reference Documentation"]
             end
 
         end
+        
+
 
         subgraph Build["Build Process (Sphinx + conf.py)"]
             direction TB
