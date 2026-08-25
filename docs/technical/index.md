@@ -4,6 +4,7 @@
 :maxdepth: 2
 :glob:
 
+introduction
 repository
 setup
 build
