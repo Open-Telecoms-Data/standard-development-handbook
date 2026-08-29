@@ -16,7 +16,7 @@ The tables below list the validation keywords, types and formats used in the sch
 | [`const`](https://json-schema.org/understanding-json-schema/reference/generic.html#constant-values) | `/networks/0/crs/name` | 
 | [`minItems`](https://json-schema.org/understanding-json-schema/reference/array.html#length) | `/networks/0/nodes` | 
 | [`uniqueItems`](https://json-schema.org/understanding-json-schema/reference/array.html#uniqueness) | `/networks/0/phases` | 
-| [`pattern` (`propertyNames`)](https://json-schema.org/understanding-json-schema/reference/object.html#property-names) | `/networks/0/spans/0/route` | 
+| [`additionalProperties](https://json-schema.org/understanding-json-schema/reference/object.html#additional-properties) | `/networks/0/spans/0/route` | 
 | [`pattern` (`string`)](https://json-schema.org/understanding-json-schema/reference/string.html#regular-expressions) | `/networks/0/links/1/rel` | 
 | [`minLength`](https://json-schema.org/understanding-json-schema/reference/string.html#length) | `/networks/0/name` | 
 | [`enum`](https://json-schema.org/understanding-json-schema/reference/generic.html#enumerated-values) | `/networks/0/spans/0/status` | 
