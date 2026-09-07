@@ -27,7 +27,7 @@ author = 'Open Data Services Co-operative'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autosectionlabel', 'myst_parser'
+    'sphinx.ext.autosectionlabel', 'myst_parser', 'sphinxcontrib.mermaid'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -58,3 +58,4 @@ html_static_path = ['_static']
 
 autosectionlabel_prefix_document = True
 myst_enable_extensions = ['deflist', 'fieldlist']
+myst_fence_as_directive = ['mermaid']
