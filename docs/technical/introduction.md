@@ -15,7 +15,7 @@ The standard is built using a ["Docs as Code"](https://www.writethedocs.org/guid
 
 ## How the documentation is built
 
-The following diagram illustrates how the source files in the repository are transformed into the final published standard.
+The following diagram illustrates how the source files in the repository are transformed into the final published standard. For more information, see [additional processing](additional_processing.md).
 
 ```mermaid
     graph LR
