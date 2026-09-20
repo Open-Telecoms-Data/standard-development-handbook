@@ -1,6 +1,6 @@
 # Schema
 
-`network-schema.json` is the single source of truth for defining OFDS's objects and fields. It is documented using an extended version of [JSON Schema 2020-12](https://json-schema.org/specification-links.html#2020-12).
+`network-schema.json` is the single source of truth for defining OFDS's objects and fields. It is documented using an extended version of [JSON Schema 2020-12](https://json-schema.org/specification-links.html#2020-12), which adds various custom keywords related to codelists, deprecation and extracting a relational data model from the schema. For more information on the additional keywords, see the [Open Data Services JSON Schema extension documentation](https://docs.opendataservices.coop/projects/json-schema-extension/2__0__0/2020-12.html).
 
 The source for `network-schema.json` and other schema files is in the [`schema` directory](https://github.com/Open-Telecoms-Data/open-fibre-data-standard/tree/0.1-dev/schema) of the standard repository.
 

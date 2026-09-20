@@ -22,6 +22,12 @@ You can skip this section if you are not releasing a new major, minor or patch v
 
 ### Perform periodic updates
 
+#### Update last_change date in GeoPackage template
+
+Set `LAST_CHANGE` in `schema/data_formats/geopackage/buildofdsgeopackage.py` to the current date.
+
+Run `./manage.py pre-commit` to update the GeoPackage template.
+
 #### Update external codelists
 
 ```bash
