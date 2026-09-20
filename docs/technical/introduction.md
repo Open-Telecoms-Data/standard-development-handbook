@@ -74,29 +74,32 @@ The following diagram illustrates the workflow for making changes to the schema,
 
         1[Set Up]
         2[Branch]
-        3[Edit]
-        4{Build}
-        5{Test}
-        6[Commit]
-        7[Merge]
+        3[Edit Source Files]
+        4[Update Derived Files]
+        5{Build}
+        6{Test}
+        7[Commit]
+        8[Merge]
 
         1 --> 2
         2 --> 3
         3 --> 4
-        4 -->|Fail| 3
-
-        4 -->|Succeed| 5
+        4 --> 5
         5 -->|Fail| 3
-        5 -->|Pass| 6
-        6 --> 7
+
+        5 -->|Succeed| 6
+        6 -->|Fail| 3
+        6 -->|Pass| 7
+        7 --> 8
 ```
 
 The key steps in the workflow are:
 
 1. **Set up your development environment:** Install the tools you need to edit, test and build the standard. The recommended approach is to [use GitHub Codespaces](setup.md#use-github-codespaces), a pre-configured and hosted development environment.
 2. **Create a branch:** Create a branch from the current staging branch, to develop features, fix bugs, or safely experiment with new ideas in a contained area of the repository.
-3. **Edit files:** Edit the schema, codelists and/or Markdown files in the repository's [directory structure](repository.md#structure).
-4. **Build the documentation**:** Check that the build succeeds, [correct any errors](build.md#resolve-build-errors), and preview your changes locally.
-5. **Test the schema and codelists:** [Run tests](build.md#run-tests) to identify common issues and [resolve any failures](build.md#resolve-test-failures).
-6. **Commit your changes:** Once the docs build succeeds, the tests pass, and you are happy with your changes, commit them to your branch.
-7. **Merge your changes:** Create a pull request to merge your changes into the current staging branch for inclusion in a future release.
+3. **Edit source files:** Edit the schema, codelists and/or Markdown files in the repository's [directory structure](repository.md#structure).
+4. **Update derived files:** Run [`manage.py pre-commit`](additional_processing.md#managepy-pre-commit) to update the derived files in the repository, including the data model CSVs, diagrams, and Sphinx directives.
+5. **Build the documentation**: Check that the build succeeds, [correct any errors](build.md#resolve-build-errors), and preview your changes locally.
+6. **Test the schema and codelists:** [Run tests](build.md#run-tests) to identify common issues and [resolve any failures](build.md#resolve-test-failures).
+7. **Commit your changes:** Once the docs build succeeds, the tests pass, and you are happy with your changes, commit them to your branch.
+8. **Merge your changes:** Create a pull request to merge your changes into the current staging branch for inclusion in a future release.
