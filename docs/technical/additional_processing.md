@@ -2,11 +2,11 @@
 
 This page is for maintainers of the **build tooling** in the `open-fibre-data-standard` repository, i.e. the code that takes `network-schema.json` and derives the logical data model, the CSV and GeoPackage formats, and the rendered documentation. It is not aimed at people editing the schema's content, writing prose in the docs, or reading the published standard.
 
-Everything described here programmatically derived from one source of truth: `schema/data_formats/json/network-schema.json`. None of the derived files should be hand-edited.
+The processes described here programmatically produce documentation and resources from the primary source of truth: `schema/data_formats/json/network-schema.json`. None of the derived files should be hand-edited.
 
 There are two distinct processing stages, run at different times, by different tools:
 
-1. **`manage.py pre-commit`** is run manually by a maintainer when `network-schema.json` is updated. The resulting changes are checked into the Git repository. The script regenerates the data model CSVs, the GeoPackage template and example, the CSV example/template, the CSV reference docs, and the GeoPackage ER diagram.
+1. **`manage.py pre-commit`** is run manually by a maintainer when `network-schema.json` is updated. The script regenerates the data model CSVs, the GeoPackage template and example, the CSV example/template, the CSV reference docs, and the GeoPackage ER diagram. The resulting changes should then be committed to the Git repository as usual. 
 2. **`docs/conf.py`'s `env-before-read-docs` hook** is run automatically by Sphinx every time the docs are built (locally or on Read the Docs). It copies the schema and GeoPackage template into the build output, substitutes `{{version}}` placeholders, and derives the GeoPackage table-definition CSVs used in the reference documentation.
 
 The Sphinx build then renders MyST directives (`{jsonschema}`, `{jsoninclude-quote}`, `{mermaid}`, `{csv-table}`, …) that read the files produced by both stages.
