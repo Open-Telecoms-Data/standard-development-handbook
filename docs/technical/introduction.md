@@ -67,7 +67,7 @@ The following diagram illustrates how the source files in the repository are tra
 
 ## Contribution workflow
 
-The following diagram illustrates the workflow for making changes to the schema, codelists and documentation. For more information, see [contributing](contributing.md).
+The following diagram illustrates the workflow for making changes to the schema, codelists and documentation. For more information, see [contributing](../standard/contributing.md).
 
 ```mermaid
     flowchart LR

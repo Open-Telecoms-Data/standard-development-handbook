@@ -26,7 +26,7 @@ Before making changes to the standard, you should first propose them in an [issu
 
 1. **Setup:** You first need to [set up your development environment](../technical/setup.md) so that you can update derived files, and check for build errors and test failures before pushing your changes to GitHub.
 1. **Branch:** Create a 'feature' or 'topic' [branch](https://docs.github.com/en/pull-requests/reference/branches) from the current staging (`X.Y-dev`) branch of the [open-fibre-data-standard](https://github.com/Open-Telecoms-Data/open-fibre-data-standard) repo, e.g. `0.5-dev`. The usual feature branch naming convention is `<issue-number>-<short-description>`, e.g. `123-add-new-entity`.
-1. **Edit files:** Make your changes by editing the source files in the repository's [directory structure](../repository.md#structure), following the guidance in [editing files](#editing-files) and [logging changes](#logging-changes). Do not edit derived files, which are generated from the source files.
+1. **Edit files:** Make your changes by editing the source files in the repository's [directory structure](../technical/repository.md#structure), following the guidance in [editing files](#editing-files) and [logging changes](#logging-changes). Do not edit derived files, which are generated from the source files.
 1. **Update derived files:** Run `manage.py pre-commit` to update the derived files in the repository, including the data model CSVs, diagrams, and Sphinx directives.
 1. **Build:** [Build the documentation](../technical/build.md#build-the-documentation) and [resolve any build errors](../technical/build.md#resolve-build-errors).
 1. **Test:** [Run tests](../technical/build.md#run-tests) to identify common issues and [resolve any failures](../technical/build.md#resolve-test-failures).
@@ -45,11 +45,11 @@ When editing files, follow these guidelines:
       * CSV files in the `codelists/` directory, which define the controlled vocabularies used in the data model and schemas.
       * JSON files in the `examples/json` directory, which provide example data for the JSON data format, and are used to derive the GeoPackage and CSV example files.
    * If you add a new definition in `network-schema.json`:
-      * Add the necessary [custom keywords for extracting the logical data model](../schema.md#custom-keywords-for-extracting-the-logical-data-model) to control its representation in the logical data model.
+      * Add the necessary [custom keywords for extracting the logical data model](schema.md#custom-keywords-for-extracting-the-logical-data-model) to control its representation in the logical data model.
       * Add a subheading for the new definition in `docs/reference/data_formats/json/reference.md`, following the pattern of the other definitions.
       * If the definition is represented as an entity in the logical data model, add a subheading for it in `docs/reference/data_model/index.md`, following the pattern of the other entities.
    * If you add a new foreign-key or M:N property to `network-schema.json`:
-      * Add the necessary [custom keywords for extracting the logical data model](../schema.md#custom-keywords-for-extracting-the-logical-data-model) to control its representation in the logical data model.
+      * Add the necessary [custom keywords for extracting the logical data model](schema.md#custom-keywords-for-extracting-the-logical-data-model) to control its representation in the logical data model.
       * Add an entry for it in `schema/data_formats/geopackage/buildofdsgeopackage.py`'s `MAPPING_FOREIGN_KEY_NAMES_TO_LAYERS` or `MAPPING_MANY_TO_MANY_KEY_NAMES_TO_LAYERS` dictionaries, so that the GeoPackage builder knows which table to point the relationship at.
    * If you add a new table or rename an existing one, update `geopackage.yaml`'s `ignoreTables` list and the `class ...` lines in `manage.py`'s footer-construction code, so that the GeoPackage ER diagram is generated correctly.
    * If you use a JSON Schema validation keyword, type or format that is not [already used in the schema](schema.md#json-schema-usage):
@@ -110,7 +110,7 @@ Reference:
 
 ### Logging changes
 
-Update the [changelog](../changelog.md) with a short description of the change, following the [changelog style guide](../style/changelog_style_guide) and maintaining schema order in the list of changes.
+Update the changelog with a short description of the change, following the [changelog style guide](../style/changelog_style_guide) and maintaining schema order in the list of changes.
 
 ### Reviewing changes
 

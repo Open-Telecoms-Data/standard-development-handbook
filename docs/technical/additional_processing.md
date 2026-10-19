@@ -1,6 +1,6 @@
 # Additional pre-commit and build-time processing
 
-This page is for maintainers of the **build tooling** in the `open-fibre-data-standard` repository, i.e. the code that takes `network-schema.json` and derives the logical data model, the CSV and GeoPackage formats, and the rendered documentation. It is not aimed at people editing the schema's content, writing prose in the docs, or reading the published standard. Those people should read the guidance on [contributing](./contributing.md) and [building the docs](./build.md) instead.
+This page is for maintainers of the **build tooling** in the `open-fibre-data-standard` repository, i.e. the code that takes `network-schema.json` and derives the logical data model, the CSV and GeoPackage formats, and the rendered documentation. It is not aimed at people editing the schema's content, writing prose in the docs, or reading the published standard. Those people should read the guidance on [contributing](../standard/contributing.md) and [building the docs](./build.md) instead.
 
 The processes described here programmatically produce documentation and resources from the primary source of truth: `schema/data_formats/json/network-schema.json`. None of the derived files should be hand-edited.
 
@@ -29,7 +29,7 @@ The command performs the following steps, in order:
 
 ### 2. Extract the logical data model (`schema/data_model/`)
 
-The logical data model is extracted by `update_data_model_docs()` and `extract_model()` in `manage.py`. This walks the dereferenced schema and reconstructs the logical entity/relationship/attribute model that the JSON Schema encodes implicitly through `$ref`s. The schema implements [custom keywords for extracting the logical data model](../schema.md#custom-keywords-for-extracting-the-logical-data-model).
+The logical data model is extracted by `update_data_model_docs()` and `extract_model()` in `manage.py`. This walks the dereferenced schema and reconstructs the logical entity/relationship/attribute model that the JSON Schema encodes implicitly through `$ref`s. The schema implements [custom keywords for extracting the logical data model](../standard/schema.md#custom-keywords-for-extracting-the-logical-data-model).
 
 For each entity, `extract_model()` accumulates relationships and attributes and `update_data_model_docs()` writes the following files:
 
