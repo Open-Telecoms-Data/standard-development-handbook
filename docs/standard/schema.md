@@ -1,8 +1,22 @@
 # Schema
 
-`network-schema.json` is the single source of truth for defining OFDS's objects and fields. It is documented using an extended version of [JSON Schema 2020-12](https://json-schema.org/specification-links.html#2020-12).
+`network-schema.json` is the single source of truth for defining OFDS's objects and fields. It is documented using [JSON Schema 2020-12](https://json-schema.org/specification-links.html#2020-12). The [Open Data Services JSON Schema extension](https://docs.opendataservices.coop/projects/json-schema-extension/2__0__0/2020-12.html) adds various custom keywords related to codelists, deprecation and extracting a logical data model from the schema. 
 
 The source for `network-schema.json` and other schema files is in the [`schema` directory](https://github.com/Open-Telecoms-Data/open-fibre-data-standard/tree/0.1-dev/schema) of the standard repository.
+
+## Custom keywords for extracting the logical data model
+
+The following additional keywords are used to mark up the schema for extraction of the logical data model. For more information, refer to the [Open Data Services JSON Schema extension documentation](https://docs.opendataservices.coop/projects/json-schema-extension/2__0__0/2020-12.html).
+
+ Keyword | Where it appears | Meaning |
+| --- | --- | --- |
+| `x-logical-type: entity` | on a `$defs` entry | This definition is a first-class entity in the logical data model, e.g. `Node`, `Span`, `Organisation`, etc.|
+| `x-logical-type: attribute` | on a `$defs` entry | Properties that reference this definition are treated as attributes in the logical data model. For example, the `PointGeometry` definition sets `x-logical-type: attribute` so `Node.location`, which references the definition, is treated as an attribute rather than a relationship to an entity. |
+| `x-logical-type: exclude` | on a property | This property is omitted entirely from the logical model. Used for format-specific plumbing that has no logical-model meaning. For example, the top-level `organisations` property is excluded because it is only applicable to the JSON publication format, which nests everything under a top-level network object. |
+| `x-references` | on a property or `$defs` entry | Marks a property or definition as a foreign-key-style reference to an entity, and defines the source and target properties for the reference, and the collection (array) that contains the entities. For example, the `Span.start` property references the `.id` property of the nodes in the `nodes` array. Likewise, the `PhaseReference` definition references the `.id` property of the phases in the `phases` array. |
+| `x-relationship-label` | on a property | Human-readable label for the relationship, used as the edge label in the Mermaid ER diagram. |
+
+If you add a new entity or a new kind of reference to the schema, you almost certainly need to add one of these keywords for it to show up correctly in the data model. For more information, see the guidance on [editing files](./contributing.md#editing-files).
 
 ## JSON Schema usage
 
